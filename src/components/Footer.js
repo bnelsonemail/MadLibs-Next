@@ -1,0 +1,18 @@
+// src/app/components/Footer.js
+
+export default function Footer() {
+  return (
+    <footer className="w-full p-4 border-t text-center bg-gray-100 dark:bg-gray-900 dark:text-white">
+      <p className="text-lg font-semibold">Created by: Brice Nelson</p>
+      <p className="text-sm text-gray-600 dark:text-gray-400">© {new Date().getFullYear()} MadLibs App. All rights reserved.</p>
+      <div className="flex justify-center gap-4 mt-2">
+        <a href="https://github.com/bnelsonemail" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/brice-a-nelson-p-e-mba-36b28b15/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+          LinkedIn
+        </a>
+      </div>
+    </footer>
+  );
+}
