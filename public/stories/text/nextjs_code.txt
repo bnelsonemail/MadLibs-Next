@@ -1,0 +1,545 @@
+madlibs-app/
+ ├── src/
+ │   ├── app/                      ✅ Next.js App Router Pages
+ │   │   ├── layout.js             ✅ Global layout (Navbar, Footer, Providers)
+ │   │   ├── page.js               ✅ Home Page
+ │   │   ├── globals.css           ✅ Global styles including dark mode, Styling (CSS & Tailwind)
+ │   │   ├── madlibs/              ✅ MadLibs Section
+ │   │   │   ├── page.js           ✅ MadLibs List Page
+ │   │   │   ├── madLibsData.js    ✅ MadLibs Data
+ │   │   │   ├── new/page.js       ✅ Create New MadLib Page
+ │   │   │   ├── [id]/page.js      ✅ Individual MadLib Play Page
+ │   ├── components/               ✅ Reusable UI Components
+ │   │   ├── Navbar.js             ✅ Navigation bar with dark mode toggle
+ │   │   ├── Footer.js             ✅ Footer with author credit and links
+ │   │   ├── ThemedApp.js          ✅ Handles dark/light mode theme
+ │   ├── context/                  ✅ Global State Management (Context API)
+ │   │   ├── MadLibsContext.js      ✅ Stores & manages MadLibs
+ │   │   ├── ThemeContext.js        ✅ Manages dark/light mode state
+ │   ├── public/                    ✅ Public Assets (Images, Favicons, etc.)
+ │   ├── utils/                      ✅ Utility functions (optional)
+ │   ├── .env                        ✅ Environment Variables (for future DB)
+ │   ├── .gitignore                   ✅ Ignore unnecessary files in Git
+ │   ├── next.config.js               ✅ Next.js configuration
+ │   ├── package.json                 ✅ Project dependencies
+ │   ├── README.md                     ✅ Documentation
+ │   │
+ ├── .env                     # Environment variables (Database, API keys)
+ ├── .gitignore                # Files to ignore in Git
+ ├── tailwind.config.js        # Tailwind configuration
+ ├── postcss.config.js         # PostCSS config for Tailwind
+ ├── package.json              # Dependencies
+ ├── next.config.js            # Next.js configuration
+ ├── README.md                 # Project documentation
+
+
+// src/app/layout.js
+
+import { MadLibsProvider } from "@/context/MadLibsContext";
+import { ThemeProvider } from "@/context/ThemeContext";
+import ThemedApp from "@/components/ThemedApp";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer"; // ✅ Import Footer
+import "./globals.css";
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body className="min-h-screen flex flex-col transition-colors duration-300">
+        <ThemeProvider>
+          <MadLibsProvider>
+            <ThemedApp>
+              <Navbar />
+              <main className="p-6 flex-grow">{children}</main> {/* ✅ Allow page content to expand */}
+              <Footer /> {/* ✅ Footer always at bottom */}
+            </ThemedApp>
+          </MadLibsProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
+
+
+
+// src/app/page.js
+
+"use client";
+import Link from "next/link";
+import { useTheme } from "@/context/ThemeContext";
+
+export default function HomePage() {
+  const { darkMode } = useTheme();
+
+  return (
+    <main className="text-center p-8 transition-colors duration-300">
+      <h1 className="text-4xl font-bold">Welcome to MadLibs!</h1>
+      <p className="mt-4 text-lg">Create and play hilarious stories with custom words.</p>
+
+      {/* Toggle indicator */}
+      <div className="mt-4 text-gray-500">
+        {darkMode ? "🌙 Dark Mode Enabled" : "🌞 Light Mode Enabled"}
+      </div>
+
+      {/* Navigation Button */}
+      <Link href="/madlibs" className="mt-6 inline-block bg-blue-500 text-white px-6 py-2 rounded">
+        View MadLibs
+      </Link>
+    </main>
+  );
+}
+
+
+
+// src/app/madlibs/page.js
+
+"use client";
+import Link from "next/link";
+import { madlibs } from "./madlibsData";
+
+export default function MadLibsPage() {
+  // Group stories by category
+  const categories = [...new Set(madlibs.map((madlib) => madlib.category))];
+
+  return (
+    <div className="p-6">
+      <h1 className="text-3xl font-bold mb-4">Choose a MadLib Story</h1>
+
+      {categories.map((category) => (
+        <div key={category} className="mb-6">
+          <h2 className="text-2xl font-semibold text-blue-600">{category}</h2>
+          <ul className="list-disc ml-6 mt-2">
+            {madlibs
+              .filter((madlib) => madlib.category === category)
+              .map((madlib) => (
+                <li key={madlib.id}>
+                  <Link href={`/madlibs/${madlib.id}`} className="text-lg text-blue-500 hover:underline">
+                    {madlib.title}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+
+
+// src/app/madlibs/madlibsData.js
+
+export const madlibs = [
+    // 🏕️ Adventure Story
+    {
+      id: "1",
+      title: "The Lost Expedition",
+      category: "Adventure",
+      template: "Deep in the heart of {place}, an explorer named {name} set out on a journey. Armed with only a {object}, they braved {adjective1} rivers, {adjective2} caves, and a tribe of {adjective3} {plural-noun}. Just when they thought all hope was lost, they discovered a hidden {noun} that changed history forever!"
+    },
+    
+    // 🚀 Sci-Fi Story
+    {
+      id: "2",
+      title: "Escape from Planet X",
+      category: "Sci-Fi",
+      template: "Captain {name} of the {adjective1} Starship stumbled upon Planet {planet}. The planet was covered in {color} terrain, and the air smelled like {noun}. Suddenly, a group of {adjective2} aliens approached, speaking in {language}. With only a {weapon} in hand, the crew had to find a way to escape before the {plural-noun} arrived!"
+    },
+  
+    // 🧙‍♂️ Fantasy Story
+    {
+      id: "3",
+      title: "The Cursed Kingdom",
+      category: "Fantasy",
+      template: "In the kingdom of {place}, a {adjective1} wizard cast a spell upon {name}, turning them into a {animal}. The only way to break the curse was to find the {color} stone hidden inside the {adjective2} forest, guarded by a {adjective3} dragon. With the help of a {adjective4} knight, the journey to lift the spell began!"
+    },
+  
+    // 👻 Horror Story
+    {
+      id: "4",
+      title: "Whispers in the Dark",
+      category: "Horror",
+      template: "On a cold {season} night, {name} entered the abandoned {place}. A {adjective1} whisper echoed through the halls. The walls were covered in {color} stains, and the floor creaked under the weight of unseen {plural-noun}. As {name} reached for the {object}, a {adjective2} shadow moved in the corner. What happened next would haunt them forever..."
+    },
+  
+    // 🕵️‍♂️ Mystery Story
+    {
+      id: "5",
+      title: "The Missing Jewel",
+      category: "Mystery",
+      template: "Detective {name} arrived at {place} to investigate a missing {noun}. The last person to see it was {name2}, who claimed to have been at {location} during the {time}. The only clue left behind was a {color} {object}. Could the thief be {adjective1}, or was it all a setup?"
+    },
+  
+    // 🎭 Comedy Story
+    {
+      id: "6",
+      title: "The Worst First Date",
+      category: "Comedy",
+      template: "{name} arrived at the {place}, hoping for a {adjective1} evening. Instead, they accidentally sat on a {object}, spilled {liquid} all over their {clothing}, and were chased by a {animal} down the street. 'This is the most {adjective2} date ever!' {name} said, but at least they got a free {food}!"
+    },
+  
+    // 🏴‍☠️ Pirate Story
+    {
+      id: "7",
+      title: "The Treasure Hunt",
+      category: "Pirates",
+      template: "Captain {name} set sail on the {adjective1} ship, searching for the lost treasure of {pirate-name}. Armed with only a {weapon} and a map, they braved {adjective2} storms and battled a crew of {plural-noun}. At last, they found the chest, but instead of gold, it was filled with {adjective3} {object}!"
+    },
+  
+    // 🦸‍♂️ Superhero Story
+    {
+      id: "8",
+      title: "The Rise of {name}",
+      category: "Superheroes",
+      template: "After being struck by {energy-source}, {name} gained the power of {superpower}. With their {adjective1} suit and trusty {weapon}, they fought against {villain-name}, who threatened to destroy {place}. As the final battle began, {name} knew only one thing: this was their moment to become the greatest {hero-title} ever!"
+    }
+  ];
+
+
+
+
+// src/app/madlibs/[id]/page.js
+
+"use client";
+import { useParams } from "next/navigation";
+import { madlibs } from "../madlibsData";
+import { useState } from "react";
+
+export default function MadLibPage() {
+  const { id } = useParams();
+  const madlib = madlibs.find((m) => m.id === id);
+
+  if (!madlib) return <p className="text-center mt-6">MadLib not found.</p>;
+
+  // Extract placeholders from the template
+  const placeholderRegex = /{(.*?)}/g;
+  const placeholders = [...new Set(madlib.template.match(placeholderRegex)?.map((p) => p.replace(/[{}]/g, "")) || [])];
+
+  // State for input fields
+  const [inputs, setInputs] = useState(Object.fromEntries(placeholders.map((p) => [p, ""])));
+  const [showStory, setShowStory] = useState(false);
+
+  // Function to replace placeholders dynamically
+  const fillMadLib = () => {
+    let filledTemplate = madlib.template;
+    Object.keys(inputs).forEach((key) => {
+      const value = inputs[key] || `[${key}]`; // Show [placeholder] if empty
+      filledTemplate = filledTemplate.replace(new RegExp(`{${key}}`, "g"), value);
+    });
+    return filledTemplate;
+  };
+
+  return (
+    <div className="p-6 max-w-lg mx-auto">
+      <h1 className="text-3xl font-bold">{madlib.title}</h1>
+      <p className="text-lg italic mb-4 text-blue-600">{madlib.category} Story</p>
+
+      {!showStory ? (
+        <form className="space-y-4">
+          {placeholders.map((key) => (
+            <input
+              key={key}
+              type="text"
+              name={key}
+              placeholder={`Enter a ${key}`}
+              value={inputs[key]}
+              onChange={(e) => setInputs({ ...inputs, [key]: e.target.value })}
+              className="w-full p-2 border rounded dark:bg-gray-800 dark:text-white"
+            />
+          ))}
+
+          {/* Submit Button */}
+          <button
+            type="button"
+            onClick={() => setShowStory(true)}
+            className="bg-green-500 text-white px-4 py-2 rounded w-full"
+          >
+            Generate Story
+          </button>
+        </form>
+      ) : (
+        <div>
+          <div className="story-card mt-6">{fillMadLib()}</div>
+          <button
+            onClick={() => setShowStory(false)}
+            className="bg-blue-500 text-white px-4 py-2 rounded w-full mt-4"
+          >
+            Edit Words
+          </button>
+          <button
+            onClick={() => window.location.reload()}
+            className="bg-red-500 text-white px-4 py-2 rounded w-full mt-2"
+          >
+            Restart
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+
+
+// src/app/madlibs/new/page.js
+
+"use client";
+import { useState } from "react";
+import { useMadLibs } from "@/context/MadLibsContext";
+import { useRouter } from "next/navigation";
+
+const placeholders = ["noun1", "noun2", "verb1", "verb2", "adjective1", "adjective2", "color1", "color2"];
+
+export default function NewMadLibPage() {
+  const { addMadLib } = useMadLibs();
+  const router = useRouter();
+  const [title, setTitle] = useState("");
+  const [template, setTemplate] = useState("");
+  const [usedPlaceholders, setUsedPlaceholders] = useState([]); // Track used placeholders
+  const [error, setError] = useState("");
+
+  // Function to insert placeholders into the template
+  const insertPlaceholder = (placeholder) => {
+    // If already used, do nothing
+    if (usedPlaceholders.includes(placeholder)) return;
+
+    // Insert placeholder at the current cursor position
+    const textarea = document.getElementById("madlib-textarea");
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const newText = template.slice(0, start) + ` {${placeholder}} ` + template.slice(end);
+    setTemplate(newText);
+
+    // Mark placeholder as used
+    setUsedPlaceholders([...usedPlaceholders, placeholder]);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!title.trim() || !template.trim()) {
+      setError("Title and template are required!");
+      return;
+    }
+    addMadLib(title, template);
+    router.push("/madlibs");
+  };
+
+  return (
+    <div className="p-6 max-w-lg mx-auto">
+      <h1 className="text-3xl font-bold mb-4">Create a New MadLib</h1>
+      {error && <p className="text-red-500">{error}</p>}
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Title Input */}
+        <input
+          type="text"
+          placeholder="MadLib Title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="w-full p-2 border rounded"
+        />
+
+        {/* Template Textbox */}
+        <textarea
+          id="madlib-textarea"
+          placeholder="Type your story here... Click buttons to insert placeholders."
+          value={template}
+          onChange={(e) => setTemplate(e.target.value)}
+          className="w-full p-3 border rounded min-h-[120px]"
+        />
+
+        {/* Placeholder Buttons */}
+        <div className="flex flex-wrap gap-2">
+          {placeholders.map((placeholder) => (
+            <button
+              key={placeholder}
+              type="button"
+              onClick={() => insertPlaceholder(placeholder)}
+              disabled={usedPlaceholders.includes(placeholder)} // Disable button if used
+              className={`px-3 py-1 rounded border ${usedPlaceholders.includes(placeholder) ? "bg-gray-400 text-gray-700 cursor-not-allowed" : "bg-blue-500 text-white hover:bg-blue-600"}`}
+            >
+              {placeholder}
+            </button>
+          ))}
+        </div>
+
+        {/* Submit Button */}
+        <button type="submit" className="bg-green-500 text-white px-4 py-2 rounded w-full">
+          Add MadLib
+        </button>
+      </form>
+    </div>
+  );
+}
+
+
+
+// src/app/components/Footer.js
+
+export default function Footer() {
+  return (
+    <footer className="w-full p-4 border-t text-center bg-gray-100 dark:bg-gray-900 dark:text-white">
+      <p className="text-lg font-semibold">Created by: Brice Nelson</p>
+      <p className="text-sm text-gray-600 dark:text-gray-400">© {new Date().getFullYear()} MadLibs App. All rights reserved.</p>
+      <div className="flex justify-center gap-4 mt-2">
+        <a href="https://github.com/bnelsonemail" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+          GitHub
+        </a>
+        <a href="https://www.linkedin.com/in/brice-a-nelson-p-e-mba-36b28b15/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+          LinkedIn
+        </a>
+      </div>
+    </footer>
+  );
+}
+
+
+
+// src/components/Navbar.js
+
+"use client";
+import Link from "next/link";
+import { useTheme } from "@/context/ThemeContext";
+
+export default function Navbar() {
+  const { darkMode, toggleDarkMode } = useTheme();
+
+  return (
+    <nav className={`w-full p-4 border-b flex justify-between items-center transition-colors duration-300 ${darkMode ? "navbar-dark" : "navbar-light"}`}>
+      {/* Left Side: Title */}
+      <Link href="/" className="text-2xl font-bold">
+        Mad Libs
+      </Link>
+
+      {/* Right Side: Navigation Links */}
+      <div className="flex gap-6 items-center">
+        <Link href="/madlibs" className="hover:text-blue-500">
+          View MadLibs
+        </Link>
+        <Link href="/madlibs/new" className="hover:text-blue-500">
+          Create MadLib
+        </Link>
+
+        {/* Dark Mode Toggle */}
+        <button
+          onClick={toggleDarkMode}
+          className={`px-3 py-1 rounded border transition-colors duration-300 ${darkMode ? "button-dark" : "button-light"}`}
+        >
+          {darkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
+        </button>
+      </div>
+    </nav>
+  );
+}
+
+
+// src/components/ThemedApp.js
+
+"use client";
+import { useTheme } from "@/context/ThemeContext";
+
+export default function ThemedApp({ children }) {
+  const { darkMode } = useTheme(); // ✅ Client-side theme hook
+
+  return (
+    <div className={darkMode ? "dark" : ""}> {/* ✅ Full-page dark mode toggle */}
+      {children}
+    </div>
+  );
+}
+
+
+
+
+
+// src/app/context/MadLibContext.js
+
+"use client";
+import { createContext, useContext, useState } from "react";
+
+// Create Context
+const MadLibsContext = createContext();
+
+// Provider Component
+export function MadLibsProvider({ children }) {
+  const [madlibs, setMadlibs] = useState([
+    {
+      id: "1",
+      title: "A Wild Adventure",
+      template:
+        "One day, a {adjective1} {noun1} met a {adjective2} {noun2} in the {color1} forest. They decided to {verb1} together until sunset. Suddenly, a {color2} dragon appeared and {verb2} them into the sky!",
+    },
+    {
+      id: "2",
+      title: "Space Battle",
+      template:
+        "Captain {noun1}, with their {adjective1} spaceship, flew across the {color1} galaxy. Suddenly, they saw a {adjective2} alien {noun2} trying to {verb1} their ship. Thinking fast, they used a {color2} laser to {verb2} the enemy!",
+    }
+  ]);
+
+  // Function to Add a New MadLib
+  const addMadLib = (title, template) => {
+    const newMadLib = { id: String(Date.now()), title, template };
+    setMadlibs([...madlibs, newMadLib]);
+  };
+
+  // Function to Delete a MadLib
+  const deleteMadLib = (id) => {
+    setMadlibs(madlibs.filter((madlib) => madlib.id !== id));
+  };
+
+  return (
+    <MadLibsContext.Provider value={{ madlibs, addMadLib, deleteMadLib }}>
+      {children}
+    </MadLibsContext.Provider>
+  );
+}
+
+// Custom Hook for Using the Context
+export function useMadLibs() {
+  return useContext(MadLibsContext);
+}
+
+
+
+
+
+// src/context/ThemeContext.js
+
+"use client";
+import { createContext, useContext, useState, useEffect } from "react";
+
+// Create Theme Context
+const ThemeContext = createContext();
+
+// Provider Component
+export function ThemeProvider({ children }) {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Check local storage for saved preference
+    const savedTheme = localStorage.getItem("darkMode") === "true";
+    setDarkMode(savedTheme);
+    document.documentElement.classList.toggle("dark", savedTheme);
+  }, []);
+
+  const toggleDarkMode = () => {
+    setDarkMode((prev) => {
+      const newMode = !prev;
+      localStorage.setItem("darkMode", newMode);
+      document.documentElement.classList.toggle("dark", newMode);
+      return newMode;
+    });
+  };
+
+  return (
+    <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+}
+
+// Custom Hook for Using the Theme Context
+export function useTheme() {
+  return useContext(ThemeContext);
+}
+

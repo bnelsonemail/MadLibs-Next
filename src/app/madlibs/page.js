@@ -1,33 +1,45 @@
-// src/app/madlibs/page.js
+// File: src/app/madlibs/page.js
 
-"use client";
-import Link from "next/link";
-import { madlibs } from "./madlibsData";
+'use client'
+import { useRouter } from 'next/navigation';
 
-export default function MadLibsPage() {
-  // Group stories by category
-  const categories = [...new Set(madlibs.map((madlib) => madlib.category))];
+const categories = [
+  'Biblical', 'Detective', 'Medical Thriller', 'Medieval', 
+  'Pirate', 'Shadow Hunter', 'Star Trek', 'Star Wars', 'Superhero'
+];
+
+export default function MadLibsHome() {
+  const router = useRouter();
+
+  const handleCategorySelect = (category) => {
+    router.push(`/madlibs/${category.toLowerCase()}/form`);
+  };
+
+  const handleSurpriseMe = () => {
+    const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+    router.push(`/madlibs/${randomCategory.toLowerCase()}/form`);
+  };
 
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-4">Choose a MadLib Story</h1>
-
-      {categories.map((category) => (
-        <div key={category} className="mb-6">
-          <h2 className="text-2xl font-semibold text-blue-600">{category}</h2>
-          <ul className="list-disc ml-6 mt-2">
-            {madlibs
-              .filter((madlib) => madlib.category === category)
-              .map((madlib) => (
-                <li key={madlib.id}>
-                  <Link href={`/madlibs/${madlib.id}`} className="text-lg text-blue-500 hover:underline">
-                    {madlib.title}
-                  </Link>
-                </li>
-              ))}
-          </ul>
-        </div>
-      ))}
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold text-center">Select a MadLibs Category</h1>
+      <div className="flex justify-center gap-4 my-4">
+        {categories.map(category => (
+          <button 
+            key={category} 
+            onClick={() => handleCategorySelect(category)}
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            {category}
+          </button>
+        ))}
+        <button 
+          onClick={handleSurpriseMe}
+          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Surprise Me!
+        </button>
+      </div>
     </div>
   );
 }

@@ -149,6 +149,7 @@ madlibs-app/
  │   │   ├── globals.css           ✅ Global styles including dark mode, Styling (CSS & Tailwind)
  │   │   ├── madlibs/              ✅ MadLibs Section
  │   │   │   ├── page.js           ✅ MadLibs List Page
+ │   │   │   ├── madLibsData.js    ✅ MadLibs Data
  │   │   │   ├── new/page.js       ✅ Create New MadLib Page
  │   │   │   ├── [id]/page.js      ✅ Individual MadLib Play Page
  │   ├── components/               ✅ Reusable UI Components
