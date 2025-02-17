@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import ThemedApp from "@/components/ThemedApp";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer"; // ✅ Import Footer
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 
 export default function RootLayout({ children }) {
@@ -16,6 +18,8 @@ export default function RootLayout({ children }) {
             <ThemedApp>
               <Navbar />
               <main className="p-6 flex-grow">{children}</main> {/* ✅ Allow page content to expand */}
+              <SpeedInsights/>
+              <Analytics/>
               <Footer /> {/* ✅ Footer always at bottom */}
             </ThemedApp>
           </MadLibsProvider>
