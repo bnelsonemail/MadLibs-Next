@@ -13,33 +13,29 @@ export default function MadLibsForm() {
 
   useEffect(() => {
     if (!category) return;
-  
+
     const decodedCategory = decodeURIComponent(category).trim();
-    const formattedCategory = decodedCategory.replace(/\s+/g, '');
+    const formattedCategory = decodedCategory.replace(/\s+/g, "").toLowerCase(); // Remove spaces
     const url = `/stories/${formattedCategory}Stories.json`;
-  
+
+    console.log("Fetching:", url); // Debugging log
     fetch(url)
-      .then(async (res) => {
-        console.log(`Fetching: ${url}`, res.status);
-        if (!res.ok) {
-          throw new Error(`Failed to load: ${url} (Status: ${res.status})`);
-        }
+      .then(res => {
+        if (!res.ok) throw new Error(`Failed to load: ${url} (Status: ${res.status})`);
         return res.json();
       })
       .then(data => {
-        console.log('Loaded JSON:', data);
-        
+        console.log("Loaded JSON:", data);
         if (data.length > 0) {
-          console.log('First story:', data[0]); // ✅ Debug log
-          console.log('Prompts:', data[0].prompts); // ✅ Debug log
-  
-          setPlaceholders(data[0].prompts || []);  // Make sure prompts are set
-          setFormData(Object.fromEntries((data[0].prompts || []).map(p => [p, ''])));
+          setPlaceholders(data[0].prompts || []);
+          // Preserve previous inputs if returning from edit mode
+          const savedInputs = Object.fromEntries(data[0].prompts.map(p => [p, '']));
+          setFormData(prev => ({ ...savedInputs, ...prev }));
         }
       })
-      .catch(err => console.error('Error loading placeholders:', err));
-  }, [category]);
-    
+      .catch(err => console.error("Error loading placeholders:", err));
+
+  }, [category]); // Remove `placeholders` from dependency array (prevents infinite loop)
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -66,7 +62,7 @@ export default function MadLibsForm() {
               value={formData[placeholder] || ''}
               onChange={handleChange}
               placeholder={placeholder}
-              className="border p-2 rounded"
+              className="border p-2 rounded text-black"
             />
           ))}
           <div className="flex gap-4">
@@ -84,4 +80,3 @@ export default function MadLibsForm() {
     </div>
   );
 }
-

@@ -27,20 +27,33 @@ export default function MadLibsStory() {
         return res.json();
       })
       .then(data => {
+        console.log('Loaded JSON:', data);
+  
         if (data.length > 0) {
           const randomStory = data[Math.floor(Math.random() * data.length)];
+          console.log('Selected Story:', randomStory);
+  
           let filledStory = randomStory.template;
   
-          // 🛠️ Convert searchParams to an object
+          // Extract user inputs from search params
           const userInputs = Object.fromEntries(searchParams.entries());
+          console.log('User Inputs:', userInputs);
   
-          // 🛠️ Replace placeholders with user input values
+          // Replace placeholders with user input values
           Object.keys(userInputs).forEach(key => {
             const placeholder = `{${key}}`;
-            filledStory = filledStory.replaceAll(placeholder, userInputs[key] || `(${key})`);
+            console.log(`Replacing ${placeholder} with ${userInputs[key]}`);
+            filledStory = filledStory.replace(new RegExp(placeholder, 'g'), userInputs[key] || `(${key})`);
           });
   
-          setStory(filledStory);
+          console.log('Final Story:', filledStory);
+          
+          // 🚀 ADD A CHECK BEFORE SETTING STATE
+          if (filledStory && filledStory.trim().length > 0) {
+            setStory(filledStory);
+          } else {
+            console.error("Story did not update properly:", filledStory);
+          }
         }
         setLoading(false);
       })
@@ -50,34 +63,41 @@ export default function MadLibsStory() {
       });
   }, [category, searchParams]);
   
+  
 
   const handleNewStory = () => {
-    router.reload(); // Reload the page to get a new story with the same words
+    router.replace(`/madlibs/${category}/story?${searchParams.toString()}`);
   };
+  
 
   const handleEditForm = () => {
     router.push(`/madlibs/${category}/form?${searchParams.toString()}`);
   };
   
 
+  console.log("Rendered Story in State:", story);
+
+
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold text-center">Your Mad Libs Story</h1>
       {loading ? (
         <p className="text-center">Loading story...</p>
-      ) : (
+      ) : story ? (  // ✅ Ensure `story` is not empty before displaying
         <div className="bg-gray-100 p-4 rounded shadow-md">
-          <p className="text-lg">{story}</p>
+        <p className="text-black dark:text-black text-lg whitespace-pre-line">{story}</p>  {/* ✅ Fix formatting */}
           <div className="flex gap-4 mt-4">
             <button onClick={handleNewStory} className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded">
               New Story
             </button>
             <button onClick={handleEditForm} className="bg-gray-500 hover:bg-gray-700 text-white py-2 px-4 rounded">
-              Edit
+              New Form
             </button>
           </div>
         </div>
+      ) : (
+        <p className="text-center text-red-500">⚠️ No story generated. Try again.</p> // 🚨 Error message
       )}
     </div>
-  );
-}
+    );
+  }
