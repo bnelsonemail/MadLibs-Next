@@ -2,181 +2,181 @@
     {
         "id": 1,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "Detective {character} was no stranger to the dark alleys of {location}. With {sidekick} by their side, they ventured deeper into the {adjective} shadows. The air was thick with the smell of {substance}, and a faint trail led them to the {crime} scene. The victim's body lay twisted, a {color} {clue} gripped tightly in their hand. Nearby, a {weapon} was carelessly discarded, stained with more than just blood. {character} bent down, noticing remnants of {food} on the ground – a bizarre detail, but one that hinted at the suspect's last meal. As they interrogated {suspect}, it became clear that the motive for this crime went far beyond greed or revenge. \"{motive},\" {character} whispered to {sidekick}. The alibi? A feeble attempt to distract from the real truth: the {creature} that haunted the backstreets had finally claimed another victim. Now, it was up to {character} to {verb} the pieces together before it struck again. The clock was ticking, and justice had never been more elusive."
     },
     {
         "id": 2,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "A dim light flickered inside the {location}, casting eerie shadows on the walls as Detective {character} entered. {sidekick} followed closely behind, holding a flashlight steady. The {adjective} stench of {substance} filled the air, leading them to the center of the room. There, sprawled on the floor, was the victim, surrounded by a macabre arrangement of {food}. The murder weapon, a {color} {weapon}, was found not far from the body, but it was the {clue} on the victim's wrist that caught {character}'s attention. \"{suspect} was last seen here,\" {sidekick} muttered, scanning the scene. But the suspect's alibi was shaky at best – they claimed to have been feeding the mysterious {creature} that roamed the woods at the time of the {crime}. The clue pointed to something more sinister: a decades-old vendetta fueled by {motive}, a secret buried in the past. \"{verb} through the darkness,\" {character} whispered to themselves, determined to uncover the hidden {noun} that would bring this twisted puzzle to an end. The truth was far closer than anyone realized, lurking just beyond the shadows..."
     },
     {
         "id": 3,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The rain poured down relentlessly as Detective {character} and {sidekick} stood at the edge of the abandoned {location}. The {adjective} wind howled through the empty streets, making the scene even more chilling. The {crime} had been committed in a brutal manner, and the {suspect} was nowhere to be found. Inside, a {clue} had been left deliberately on the mantle – a twisted reminder of what was at stake. The walls were splattered with {substance}, and in the corner lay a discarded {color} {weapon}, still fresh with evidence. {character} noticed a plate of {food} on the table, untouched, perhaps meant for someone who would never return. \"The alibi doesn't hold,\" {sidekick} said quietly. {suspect} claimed they were out hunting a {creature} at the time of the attack, but that was merely a diversion. {character} pieced it together: the motive was rooted in {motive}, a bitter secret that had festered for years. With a deep breath, {character} resolved to {verb} through every detail, knowing that the {noun} hidden in the shadows of this crime would soon reveal the truth."
     },
     {
         "id": 4,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The fog was thick as Detective {character} approached the {location}, where the body had been found. A single, bloodied {clue} was left behind, barely visible in the dim light. {sidekick} shuddered, pointing to the {color} {weapon} lying nearby, still slick with {substance}. \"This wasn't just a random {crime},\" {character} muttered. The {adjective} air hung heavy with fear as they examined the victim's surroundings. Half-eaten {food} was scattered across the floor, as if the attack had come without warning. {character} knew that {suspect} had something to hide, but their alibi – claiming they were out feeding a stray {creature} – didn't sit right. {motive}, {character} thought, was always the root of such crimes. Every move needed to be precise; the only way to {verb} the truth out of this twisted situation was to follow the faint thread left behind. In the end, it would all come down to that one, overlooked {noun}..."
     },
     {
         "id": 5,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "As Detective {character} and {sidekick} entered the {location}, they were greeted by an unsettling silence. The {adjective} room was still, with only the faint drip of {substance} breaking the quiet. In the center, a {crime} had unfolded, and the air was thick with tension. A plate of {food} sat on the table, untouched, and a {clue} was left behind – a cryptic message scrawled in {color} ink. The {weapon}, a chilling reminder of what had transpired, was found near the body. As they interrogated {suspect}, their alibi crumbled under scrutiny. {character} sensed that {motive} was the driving force behind the attack. With each step, they would have to {verb} through layers of deceit, following the trail of the {creature} that had been stalking the streets. Only by finding the hidden {noun} could they hope to bring justice to the victim."
     },
     {
         "id": 6,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The dim light in the {location} flickered ominously as Detective {character} surveyed the scene. {sidekick} stood by, uneasy, as the {crime} unfolded before their eyes. A trail of {substance} led them to a {color} {weapon}, abandoned near a half-eaten plate of {food}. It was a scene straight out of a nightmare, and the {clue} left behind only deepened the mystery. \"{suspect} claims they were nowhere near the crime,\" {sidekick} remarked, \"but their alibi doesn't check out.\" {character} nodded, focusing on the faint trace of {creature} fur found near the body. The motive, rooted in {motive}, began to take shape in {character}'s mind. They would have to {verb} the puzzle piece by piece, uncovering the {noun} that would bring this dark chapter to an end."
     },
     {
         "id": 7,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "Detective {character} had seen many things in their career, but the scene at the {location} sent a chill down their spine. {sidekick} tried to remain composed as they examined the body, which lay surrounded by a pool of {substance}. The {adjective} {clue} on the wall hinted at a deeper, darker truth. The {weapon}, still glistening with {substance}, was found discarded nearby. {character} noted a strange detail – a plate of {food} was left on the table, untouched. \"The motive,\" {character} whispered, \"is tied to {motive}, something {suspect} has been hiding for years.\" The alibi, claiming they were out tending to a {creature}, fell apart under pressure. As {character} began to {verb}, piecing together the twisted narrative, they realized that the final piece of the puzzle – the {noun} – had been in front of them all along."
     },
     {
         "id": 8,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "It was a dark and stormy night when Detective {character} and {sidekick} were called to the scene of a gruesome {crime}. The {location} was eerily quiet, save for the sound of rain tapping against the windows. The body was found lying next to a {color} {clue}, and the murder weapon, a {weapon}, was still slick with {substance}. \"It doesn't make sense,\" {sidekick} muttered, \"The suspect claims they were out feeding a stray {creature}.\" But Detective {character} knew better. They could smell the scent of {food} lingering in the air, a telltale sign of a much darker {motive}. The alibi was flimsy, and as {character} began to {verb} through the evidence, they realized the {noun} they had been searching for was right there, hidden in plain sight."
     },
     {
         "id": 9,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The old mansion at the edge of {location} had been abandoned for years, but now it was the scene of a {crime} that would haunt Detective {character} for the rest of their career. Inside, {sidekick} found the {weapon}, covered in a strange {substance}, lying next to a cryptic {clue}. The room was filled with the scent of {food}, adding a surreal layer to the horror. {suspect}'s alibi involved a bizarre tale of encountering a wild {creature}, but it quickly unraveled under scrutiny. The {motive} was far more sinister than anyone had imagined, and as {character} {verb}, they began to see the dark {noun} connecting everything. The mansion held secrets, and one of them was about to be revealed..."
     },
     {
         "id": 10,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The chill in the air was palpable as Detective {character} and {sidekick} approached the scene of the {crime}. The {location} was silent, save for the distant hoot of a {creature}. The {suspect} had left behind a {color} {clue} and a {weapon}, covered in {substance}. A plate of {food} sat uneaten on the table, adding an eerie normalcy to the gruesome scene. {character} knew that {motive} was the key to cracking this case. As they {verb}, picking through every {noun} and false {alibi}, it became clear that this crime was part of something much darker. They were up against not just a killer, but a darkness that lingered deep within the {location} itself."
     },
     {
         "id": 11,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The rain poured mercilessly as Detective {character} stood outside the dilapidated {location}. The stench of decay permeated the air, a reminder of the unspeakable {crime} that had taken place within. {sidekick}, always calm under pressure, held the flashlight steady as they both crossed the threshold. Inside, a gruesome scene awaited them. A pool of {substance} surrounded the lifeless body, and the murder weapon, a {color} {weapon}, lay discarded nearby. The room seemed untouched, save for a strange {clue} that caught {character}'s eye—an odd object positioned deliberately as if to mock the investigation. A half-eaten plate of {food} sat on the table, still warm, suggesting the crime had happened moments ago. The suspect, {suspect}, swore they were tending to a {creature} at the time, their alibi hanging by a thread. But {character} knew better. The motive was deeply rooted in {motive}, a betrayal that had festered for years. The detective would have to {verb} through every {noun} in the room, follow every thread, no matter how dark or twisted. Only by piecing together the fragile clues could they bring the truth to light, but time was running out. The shadows in {location} were getting longer, and so was the list of the dead."
     },
     {
         "id": 12,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The fog rolled in thick, swallowing the moonlight as Detective {character} arrived at the secluded {location}. The call had been disturbing enough, but nothing could have prepared them for what awaited inside. The victim had been found with a {color} {clue} clenched in their hand, their face frozen in terror. Nearby, a {weapon} dripped with {substance}, a dark testimony to the brutality that had taken place. {sidekick} scanned the room, their sharp eyes catching the faintest trace of {food}, as if the killer had eaten just before committing the heinous act. {character} focused on the peculiar arrangement of the scene. It was almost ritualistic, like an offering to a dark force, or perhaps a twisted game of revenge. The prime suspect, {suspect}, had a weak alibi involving a {creature} that supposedly stalked the night. But as {character} sifted through the {noun} left behind, it became clear that {motive} was the true driving force. This wasn’t just a {crime}; it was personal. Every detail had been orchestrated with meticulous precision, a deadly puzzle that needed to be solved before more lives were claimed. The game was on, and {character} knew that only by {verb} through the dark underbelly of the {location} could they hope to catch the killer before they struck again."
     },
     {
         "id": 13,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The night was cold, the kind of cold that sank into your bones. Detective {character} and {sidekick} trudged through the {location}, a place long abandoned by everyone but the ghosts of those who met their end here. Inside, they found the remnants of a life snuffed out too soon. A {color} {clue} lay discarded beside the body, and a {weapon}, still stained with {substance}, rested nearby. The room reeked of fear and desperation. {suspect} had claimed innocence, their alibi centered around caring for a {creature} that had supposedly terrorized the town for years. But {character} knew better. The odd scent of {food} lingered in the air, mixed with something far more sinister. The motive wasn’t simple; it was layered in years of jealousy and anger. {character} would need to {verb} through every {noun} and every corner of the {location}, peeling back the layers of lies and deceit. As the night stretched on, the detective could feel the darkness closing in, the weight of the {crime} heavier with each passing hour. There was no turning back now; justice had to be served, no matter the cost."
     },
     {
         "id": 14,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The storm raged on as Detective {character} and {sidekick} arrived at the remote {location}. Inside, the crime scene was a gruesome display of violence. The body lay sprawled across the floor, a pool of {substance} expanding beneath them. In their hand, a {clue}, scribbled in {color}, hinted at a secret long kept hidden. The weapon, a bloodied {weapon}, had been hastily discarded, and a plate of {food} sat on the table, untouched. The suspect, {suspect}, claimed they had been out feeding a stray {creature}, but {character} saw through the alibi immediately. There was something more at play here. The motive was buried deep within a web of {motive}, an obsession that had grown out of control. As {character} began to {verb}, the clues started to fall into place. The {noun} hidden in plain sight was the key to unraveling the entire plot. Every piece of the puzzle painted a darker picture, and the detective knew that the closer they got to the truth, the more dangerous the investigation would become. But {character} wouldn’t stop until the real culprit was brought to justice, no matter how deep the conspiracy ran."
     },
     {
         "id": 15,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The clock struck midnight as Detective {character} and {sidekick} stood before the old mansion at the edge of {location}. The house was shrouded in darkness, but inside was a scene that would haunt them forever. The victim lay lifeless, a {clue} of {color} ink tattooed across their skin, and a {weapon} lay on the floor, still covered in {substance}. {character} knelt down beside the body, noting the faint smell of {food}, an odd detail that seemed out of place amidst the horror. {suspect}'s alibi involved a wild tale about a {creature}, but {character} knew the real motive ran much deeper. This {crime} was born from years of festering {motive}, secrets that had torn families apart. As {character} {verb}, piece by piece, the truth began to emerge. Every {noun} in the room told a story, and each one led closer to exposing the dark heart of the killer. But with every revelation, the danger grew greater. {character} would have to stay sharp; the killer wasn’t done yet, and the next target could very well be them."
     },
     {
         "id": 16,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "A gust of cold wind blew through the broken windows of the abandoned warehouse. Detective {character} stood amidst the wreckage of the brutal {crime}. The victim had been savagely attacked, the {weapon} still glistening with {substance}. A strange {color} {clue} had been left behind, etched into the wall with obsessive precision. The only sound was the distant call of a {creature}, its eerie cry echoing in the empty space. {sidekick} had already begun sorting through the alibis, but one stood out—{suspect} had claimed they were at home eating {food} when the crime occurred. Yet the scene told a different story. The motive was twisted, tied up in {motive} that had simmered for years. As {character} {verb} through the labyrinth of evidence, they realized the {noun} left behind wasn’t just a clue—it was a signature. The killer was mocking them, and with every step, they drew closer to uncovering the full extent of the killer’s plan. But time was running out, and {character} knew that if they didn’t solve the case soon, the killer would strike again—and next time, it might be someone close to them."
     },
     {
         "id": 17,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "Detective {character} had seen many things in their career, but the scene at the {location} sent a chill down their spine. {sidekick} tried to remain composed as they examined the body, which lay surrounded by a pool of {substance}. The {adjective} {clue} on the wall hinted at a deeper, darker truth. The {weapon}, still glistening with {substance}, was found discarded nearby. {character} noted a strange detail – a plate of {food} was left on the table, untouched. \"The motive,\" {character} whispered, \"is tied to {motive}, something {suspect} has been hiding for years.\" The alibi, claiming they were out tending to a {creature}, fell apart under pressure. As {character} began to {verb}, piecing together the twisted narrative, they realized that the final piece of the puzzle – the {noun} – had been in front of them all along."
     },
     {
         "id": 18,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "It was a dark and stormy night when Detective {character} and {sidekick} were called to the scene of a gruesome {crime}. The {location} was eerily quiet, save for the sound of rain tapping against the windows. The body was found lying next to a {color} {clue}, and the murder weapon, a {weapon}, was still slick with {substance}. \"It doesn't make sense,\" {sidekick} muttered, \"The suspect claims they were out feeding a stray {creature}.\" But Detective {character} knew better. They could smell the scent of {food} lingering in the air, a telltale sign of a much darker {motive}. The alibi was flimsy, and as {character} began to {verb} through the evidence, they realized the {noun} they had been searching for was right there, hidden in plain sight."
     },
     {
         "id": 19,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The old mansion at the edge of {location} had been abandoned for years, but now it was the scene of a {crime} that would haunt Detective {character} for the rest of their career. Inside, {sidekick} found the {weapon}, covered in a strange {substance}, lying next to a cryptic {clue}. The room was filled with the scent of {food}, adding a surreal layer to the horror. {suspect}'s alibi involved a bizarre tale of encountering a wild {creature}, but it quickly unraveled under scrutiny. The {motive} was far more sinister than anyone had imagined, and as {character} {verb}, they began to see the dark {noun} connecting everything. The mansion held secrets, and one of them was about to be revealed..."
     },
     {
         "id": 20,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The chill in the air was palpable as Detective {character} and {sidekick} approached the scene of the {crime}. The {location} was silent, save for the distant hoot of a {creature}. The {suspect} had left behind a {color} {clue} and a {weapon}, covered in {substance}. A plate of {food} sat uneaten on the table, adding an eerie normalcy to the gruesome scene. {character} knew that {motive} was the key to cracking this case. As they {verb}, picking through every {noun} and false {alibi}, it became clear that this crime was part of something much darker. They were up against not just a killer, but a darkness that lingered deep within the {location} itself."
     },
     {
         "id": 21,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The once-grand {location} loomed over the mist-covered cliffs. Inside, {character} and their loyal {sidekick} moved through the decaying halls, the echoes of forgotten whispers filling the air. The victim had been struck with a {weapon}, and {substance} covered the floor. A strange {color} {clue} lay beside the body, like a deliberate mark left by the killer. {suspect} was found wandering the grounds, their alibi claiming they were feeding a rare {creature} in the garden. As they {verb} through the case, {character} realized the {crime} was driven by an old grudge tied to the {motive}. The final piece of the puzzle was hidden in a dusty {noun}, revealing a chilling secret buried in the house’s dark history. As {character} put the pieces together, the shadows of the past threatened to engulf them all."
     },
     {
         "id": 22,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "In the quiet town of {location}, {character} was called to a scene that would haunt them for years. The victim had been brutally slain with a {weapon}, and the air was thick with the stench of {substance}. A {color} {clue} was found tucked beneath a plate of untouched {food}, an eerie detail that pointed to a twisted motive. The prime suspect, {suspect}, had a shaky alibi, claiming they had been caring for a strange {creature} at the time of the murder. {character} and {sidekick} followed the trail of lies and deceit, uncovering a web of betrayal. The {motive} was far darker than they had imagined, tied to a crime committed long ago, a secret that refused to stay buried. As they delved deeper, the truth revealed itself in a horrifying fashion, and {character} knew that this was a case they would never forget."
     },
     {
         "id": 23,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The night was eerily still as Detective {character} and {sidekick} entered the decrepit {location}. The victim's lifeless body lay on the floor, a {weapon} discarded nearby, still slick with {substance}. A {color} {clue} clung to the wall, a cryptic message left by the killer. {suspect} was the only one present, nervously clutching a {noun}, claiming to have been chasing after their pet {creature} during the {crime}. Their alibi seemed flimsy, and {character} knew there was more beneath the surface. They uncovered an intricate plan driven by {motive}, a desire for revenge that had festered for years. As they {verb} through the evidence, {character} discovered a hidden room, filled with disturbing relics and the final piece of the puzzle. The truth was more {adjective} than they could have imagined, and justice came at a heavy cost."
     },
     {
         "id": 24,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The {location} was abandoned years ago, its once vibrant halls now shrouded in decay and mystery. When {character} and {sidekick} arrived, they found the aftermath of a brutal {crime}. The victim had been killed with a {weapon}, and the walls were smeared with {substance}. A {color} {clue} was left behind— a strange symbol etched into the floor. {suspect} was found nearby, insisting they had been with their {creature} all night. But their alibi crumbled as {character} delved deeper into the case. The motive was rooted in a dark obsession, and the killer had been methodical. As they {verb} through the maze of lies, a hidden {noun} revealed the true nature of the crime—a sinister plan that had been in motion for years. {character} knew that catching the killer was only the beginning; what they had uncovered was just a fragment of a much larger, more {adjective} conspiracy."
     },
     {
         "id": 25,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "In the dead of night, {character} and {sidekick} arrived at the {location}, where a grim scene awaited them. The victim had been attacked with a {weapon}, leaving a pool of {substance} on the floor. A {color} {clue} was clutched in their hand—a letter, its words blurred by {substance}. {suspect} was found nearby, claiming they had been preparing a meal of {food}, an alibi that quickly fell apart under scrutiny. {character} followed the trail of clues, uncovering a disturbing history of jealousy and {motive}. As they {verb} through the evidence, they realized the {crime} was part of a larger plot, one that had been simmering for years. The final clue came in the form of a {noun}, hidden away in the dark corners of the {location}, revealing a truth far darker and more twisted than they had ever imagined."
     },
     {
         "id": 26,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "Detective {character} stood before the dilapidated {location}, watching as the wind howled through the broken windows. Inside, {sidekick} was examining the grisly scene—the victim had been savagely killed with a {weapon}, and the ground was soaked in {substance}. A strange, {color} {clue} had been left at the scene, its meaning unclear but ominous. {suspect} was brought in for questioning, claiming they had been caring for their {creature}, but their alibi quickly unraveled. The motive became clearer as {character} dug deeper into the suspect's past—an old betrayal had festered into something far darker. As they {verb} through the tangled web of lies and deceit, a {noun} uncovered in the {location} pointed to a series of {adjective} events leading up to the {crime}. In the end, justice was served, but {character} knew the scars of this case would linger for a long time."
     },
     {
         "id": 27,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "In the quiet suburbs, the {location} stood out as a house of horrors. Detective {character} and {sidekick} entered to find the remains of the victim, savagely murdered with a {weapon}. {substance} stained the walls, and a {color} {clue} was carelessly left on the floor. {suspect} claimed they had been eating a late-night meal of {food} when the {crime} occurred. Their alibi seemed plausible until {character} discovered a hidden {noun}, linking them to the crime. The motive was simple yet chilling—an insatiable desire for revenge. As they {verb} through the case, {character} realized the true horror lay not in the killing but in the {adjective} coldness of the killer’s heart. The case closed with the suspect in custody, but the {creature} of doubt lingered in {character}'s mind, gnawing away at their resolve."
     },
     {
         "id": 28,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The city streets were dark and unforgiving as Detective {character} and {sidekick} followed a trail leading to the {location}. Inside, they found the aftermath of a vicious {crime}, the victim’s body torn apart by a {weapon}, and {substance} pooled on the floor. A small, {color} {clue} was left near a half-eaten plate of {food}, a macabre touch left by the killer. {suspect} claimed they were away, chasing a {creature}, but their alibi seemed thin. {character} uncovered a dark motive—jealousy so fierce it had driven the suspect to madness. As they {verb} through the evidence, {character} uncovered a hidden {noun}, linking the crime to a series of unsolved murders. The realization that this was only the beginning of a darker conspiracy sent chills down their spine."
     },
     {
         "id": 29,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The storm raged outside as {character} and {sidekick} stepped into the eerie {location}. Inside, the body lay cold, a {weapon} resting beside it, covered in {substance}. A peculiar {color} {clue} was found at the scene, its origin unknown. {suspect} was discovered nearby, claiming they had been cooking {food} at the time. Their story fell apart when {character} uncovered a {noun}, tying them directly to the victim. The motive was clear—{motive} had driven them to commit the {crime}. As they {verb} through the shadows of the past, {character} uncovered a trail of {adjective} secrets, each more disturbing than the last. The final revelation was too dark to fathom, leaving {character} questioning the very nature of justice itself."
     },
     {
         "id": 30,
         "category": "Detective",
-        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb"],
+        "prompts": ["character", "location", "sidekick", "adjective", "substance", "crime", "color", "clue", "weapon", "food", "suspect", "motive", "creature", "verb", "noun"],
         "template": "The air was heavy with tension as {character} and {sidekick} entered the {location}, where a {crime} had taken place that would leave its mark for years to come. The victim had been struck with a {weapon}, and {substance} was splattered across the walls. A {color} {clue} caught {character}'s eye—a small token from a forgotten past. {suspect} insisted they had been tending to their pet {creature}, but their alibi crumbled when a hidden {noun} was discovered. The motive behind the crime was sinister, rooted in a deep and {adjective} hatred that had been brewing for years. As {character} {verb} through the evidence, the true horror of the case unfolded—a tangled web of lies and deceit that led to a final, bone-chilling revelation. This case would not only haunt {character}, but it would also change them forever."
     }
 ]
