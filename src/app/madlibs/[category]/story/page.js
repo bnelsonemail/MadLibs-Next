@@ -1,4 +1,4 @@
-// File: src/app/madlibs/[category]/story/page.js
+// File: src/app/madlibs/[category]/story/page.jsx
 
 'use client'
 import { useState, useEffect } from 'react';
