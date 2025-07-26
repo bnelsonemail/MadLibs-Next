@@ -6,6 +6,9 @@ export default function Footer() {
       <p className="text-lg font-semibold">Created by: Brice Nelson</p>
       <p className="text-sm text-gray-600 dark:text-gray-400">© {new Date().getFullYear()} MadLibs App. All rights reserved.</p>
       <div className="flex justify-center gap-4 mt-2">
+        <a href="https://www.devbybrice.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+          Website
+        </a>
         <a href="https://github.com/bnelsonemail" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
           GitHub
         </a>
