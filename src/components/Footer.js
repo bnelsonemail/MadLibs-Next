@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="w-full p-4 border-t text-center bg-gray-100 dark:bg-gray-900 dark:text-white">
       <p className="text-lg font-semibold">Created by: Brice Nelson</p>
-      <p className="text-sm text-gray-600 dark:text-gray-400">© {new Date().getFullYear()} MadLibs App. All rights reserved.</p>
+      <p className="text-sm text-gray-600 dark:text-gray-400">© {new Date().getFullYear()} Mad Libs Magic. All rights reserved.</p>
       <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
         Need to report an issue? Contact: <a href="mailto:brice@devbybrice.com" className="text-blue-500 hover:underline">brice@devbybrice.com</a>
       </p>
