@@ -4,6 +4,24 @@
 import { useState, useEffect } from 'react';
 import { useRouter, useParams, useSearchParams } from 'next/navigation';
 
+// Map URL-safe category names to actual file names
+const getCategoryFileName = (category) => {
+  const categoryMap = {
+    'biblical': 'biblicalStories.json',
+    'detective': 'detectiveStories.json', 
+    'medical thriller': 'medicalThrillerStories.json',
+    'medieval': 'medievalStories.json',
+    'pirate': 'pirateStories.json',
+    'shadow hunter': 'shadowHunterStories.json',
+    'star trek': 'starTrekStories.json',
+    'star wars': 'starWarsStories.json',
+    'superhero': 'superheroStories.json'
+  };
+  
+  const decodedCategory = decodeURIComponent(category).trim().toLowerCase();
+  return categoryMap[decodedCategory] || `${decodedCategory.replace(/\s+/g, '')}Stories.json`;
+};
+
 export default function MadLibsStory() {
   const params = useParams();
   const category = params?.category;
@@ -16,9 +34,8 @@ export default function MadLibsStory() {
   useEffect(() => {
     if (!category) return;
   
-    const decodedCategory = decodeURIComponent(category).trim();
-    const formattedCategory = decodedCategory.replace(/\s+/g, '');
-    const url = `/stories/${formattedCategory}Stories.json`;
+    const fileName = getCategoryFileName(category);
+    const url = `/stories/${fileName}`;
   
     fetch(url)
       .then(async (res) => {
