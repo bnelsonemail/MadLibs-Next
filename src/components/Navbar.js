@@ -11,7 +11,7 @@ export default function Navbar() {
     <nav className={`w-full p-4 border-b flex justify-between items-center transition-colors duration-300 ${darkMode ? "navbar-dark" : "navbar-light"}`}>
       {/* Left Side: Title */}
       <Link href="/" className="text-2xl font-bold">
-        Mad Libs
+        Mad Libs Magic
       </Link>
 
       {/* Right Side: Navigation Links */}
