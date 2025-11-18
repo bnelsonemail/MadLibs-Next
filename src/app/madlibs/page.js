@@ -23,6 +23,19 @@ export default function MadLibsHome() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold text-center">Select a MadLibs Category</h1>
+      
+      <div className="flex justify-center mb-8 mt-6">
+        <a
+          href="/madlibs/new"
+          className="px-6 py-3 rounded-md font-semibold 
+                     bg-green-600 hover:bg-green-700 text-white 
+                     dark:bg-green-500 dark:hover:bg-green-600
+                     transition"
+        >
+          Create Your Own MadLib
+        </a>
+      </div>
+
       <div className="flex justify-center gap-4 my-4">
         {categories.map(category => (
           <button 
