@@ -9,6 +9,22 @@ export default function HomePage() {
 
   return (
     <main className="text-center p-8 transition-colors duration-300">
+      <div className="my-8 p-6 bg-blue-100 dark:bg-blue-900 rounded-lg shadow-md">
+        <h2 className="text-2xl font-bold mb-2">Help Improve MadLibs!</h2>
+        <p className="mb-4">
+          We're exploring new features for a premium MadLibs creator — and we would
+          love your feedback! Click the button below to take a quick poll.
+        </p>
+        <a
+          href="/premium-poll"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+        >
+          Take the Poll
+        </a>
+      </div>
+
       <h1 className="text-4xl font-bold">Welcome to MadLibs!</h1>
       <p className="mt-4 text-lg">Create and play hilarious stories with custom words.</p>
 
