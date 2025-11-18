@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    eslint: {
-      ignoreDuringBuilds: true,
-    },
-  };
+  // ESLint configuration moved to eslint.config.mjs (Next.js 16+)
+};
   
-  export default nextConfig;
+export default nextConfig;
   
