@@ -7,6 +7,7 @@ export default function PremiumPollForm() {
   const [pricePoint, setPricePoint] = useState("");
   const [customPrice, setCustomPrice] = useState("");
   const [comment, setComment] = useState("");
+  const [suggestions, setSuggestions] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
@@ -36,6 +37,11 @@ export default function PremiumPollForm() {
       return;
     }
 
+    if (suggestions.length > 500) {
+      setError("Suggestions must be 500 characters or less.");
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -50,6 +56,7 @@ export default function PremiumPollForm() {
           wantsPremium,
           pricePoint: wantsPremium ? finalPricePoint : null,
           comment: comment.trim() || null,
+          suggestions: suggestions.trim() || null,
         }),
       });
 
@@ -174,6 +181,23 @@ export default function PremiumPollForm() {
         />
         <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
           {comment.length}/300 characters
+        </div>
+      </div>
+
+      <div className="mb-6">
+        <label className="block text-lg font-semibold mb-3">
+          What premium features would you like to see? (optional)
+        </label>
+        <textarea
+          value={suggestions}
+          onChange={(e) => setSuggestions(e.target.value)}
+          placeholder="Example: More categories, unlimited reuse, create-your-own MadLibs, etc."
+          maxLength={500}
+          rows={4}
+          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700"
+        />
+        <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+          {suggestions.length}/500 characters
         </div>
       </div>
 

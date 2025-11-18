@@ -1,3 +1,4 @@
+import Link from "next/link";
 import PremiumPollForm from "@/components/PremiumPollForm";
 
 export default function PremiumPollPage() {
@@ -7,13 +8,22 @@ export default function PremiumPollPage() {
         <h1 className="text-3xl font-bold mb-4 text-center">MadLibs Premium Feature Poll</h1>
 
         <p className="text-center max-w-xl mx-auto mb-6 text-gray-700 dark:text-gray-300">
-          We're exploring a possible <strong>optional premium version</strong> of MadLibs
-          for users who want more advanced features — while keeping the current site
-          <strong>100% free</strong> exactly as it is today.
-          <br /><br />
-          These are only ideas at this stage. Your feedback helps decide what features
-          (if any) should be developed in the future.
+          Help shape MadLibs Magic Premium! Your feedback decides which features we build
+          first. Scroll down to take the poll — or{" "}
+          <Link href="/premium" className="text-blue-600 dark:text-blue-400 underline font-semibold hover:text-blue-700 dark:hover:text-blue-300">
+            click here
+          </Link>{" "}
+          to see the Premium Overview and Feature Roadmap.
         </p>
+        
+        <div className="text-center max-w-xl mx-auto mb-6 bg-green-50 dark:bg-gray-800 p-4 rounded-lg border-2 border-green-300 dark:border-green-700">
+          <p className="text-gray-700 dark:text-gray-300 font-semibold">
+            See everything coming in Premium →{" "}
+            <Link href="/premium" className="text-blue-600 dark:text-blue-400 underline hover:text-blue-700 dark:hover:text-blue-300">
+              Premium Overview
+            </Link>
+          </p>
+        </div>
 
         <div className="max-w-xl mx-auto mb-8 p-4 bg-gray-100 dark:bg-gray-800 rounded-md shadow">
           <h3 className="font-semibold mb-2 text-gray-800 dark:text-gray-100">Possible Premium Features:</h3>
