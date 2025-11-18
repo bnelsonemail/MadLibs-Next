@@ -123,7 +123,7 @@ export default function PremiumPollForm() {
       {wantsPremium && (
         <div className="mb-6">
           <label className="block text-lg font-semibold mb-3">
-            What price would you be willing to pay? *
+            What monthly price would you be willing to pay? *
           </label>
           <div className="space-y-2">
             {["$0.99", "$1.99", "$2.99", "$4.99", "Other"].map((price) => (

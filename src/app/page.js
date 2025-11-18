@@ -11,10 +11,18 @@ export default function HomePage() {
     <main className="text-center p-8 transition-colors duration-300">
       <div className="my-8 p-6 bg-blue-100 dark:bg-blue-900 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold mb-2">Help Improve MadLibs!</h2>
-        <p className="mb-4">
-          We're exploring new features for a premium MadLibs creator — and we would
-          love your feedback! Click the button below to take a quick poll.
+
+        <p className="mb-3">
+          We're exploring optional premium features for users who want to create and
+          save unlimited advanced MadLibs — while keeping the entire free site exactly
+          the same.
         </p>
+
+        <p className="mb-4">
+          Nothing is changing right now. We would simply love your quick feedback
+          about whether these premium features would be useful to you.
+        </p>
+
         <a
           href="/premium-poll"
           target="_blank"
