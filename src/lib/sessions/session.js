@@ -2,8 +2,8 @@
 
 import { cookies } from 'next/headers';
 
-export function saveStoryToSession(storyText) {
-  const cookieStore = cookies();
+export async function saveStoryToSession(storyText) {
+  const cookieStore = await cookies();
   cookieStore.set('customStory', storyText, {
     httpOnly: true,
     secure: true,
@@ -13,8 +13,8 @@ export function saveStoryToSession(storyText) {
   });
 }
 
-export function getStoryFromSession() {
-  const cookieStore = cookies();
+export async function getStoryFromSession() {
+  const cookieStore = await cookies();
   return cookieStore.get('customStory')?.value || null;
 }
 

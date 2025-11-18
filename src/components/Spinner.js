@@ -1,7 +1,5 @@
 // src/app/components/Spinner.js
 
-import React from 'react'
-
 const Spinner = () => {
   return (
     <div>

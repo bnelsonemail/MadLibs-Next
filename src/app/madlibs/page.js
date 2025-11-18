@@ -2,6 +2,7 @@
 
 'use client'
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const categories = [
   'Biblical', 'Detective', 'Medical Thriller', 'Medieval', 
@@ -25,7 +26,7 @@ export default function MadLibsHome() {
       <h1 className="text-2xl font-bold text-center">Select a MadLibs Category</h1>
       
       <div className="flex justify-center mb-8 mt-6">
-        <a
+        <Link
           href="/madlibs/new"
           className="px-6 py-3 rounded-md font-semibold 
                      bg-green-600 hover:bg-green-700 text-white 
@@ -33,7 +34,7 @@ export default function MadLibsHome() {
                      transition"
         >
           Create Your Own MadLib
-        </a>
+        </Link>
       </div>
 
       <div className="flex justify-center gap-4 my-4">

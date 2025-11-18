@@ -55,8 +55,8 @@ Create:
 
 import { cookies } from 'next/headers';
 
-export function saveStoryToSession(storyText) {
-  const cookieStore = cookies();
+export async function saveStoryToSession(storyText) {
+  const cookieStore = await cookies();
   cookieStore.set('customStory', storyText, {
     httpOnly: true,
     secure: true,
@@ -66,8 +66,8 @@ export function saveStoryToSession(storyText) {
   });
 }
 
-export function getStoryFromSession() {
-  const cookieStore = cookies();
+export async function getStoryFromSession() {
+  const cookieStore = await cookies();
   return cookieStore.get('customStory')?.value || null;
 }
 ```
@@ -143,7 +143,7 @@ export async function POST(req) {
     }
   }
 
-  saveStoryToSession(story);
+  await saveStoryToSession(story);
 
   return NextResponse.json({ success: true });
 }
@@ -162,8 +162,8 @@ src/app/madlibs/new/result/page.js
 ```jsx
 import { getStoryFromSession } from '@/lib/sessions/session';
 
-export default function MadLibStoryResult() {
-  const story = getStoryFromSession();
+export default async function MadLibStoryResult() {
+  const story = await getStoryFromSession();
 
   if (!story) {
     return (

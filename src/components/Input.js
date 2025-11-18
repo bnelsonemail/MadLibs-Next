@@ -1,7 +1,5 @@
 // src/app/components/Input.js
 
-import React from 'react'
-
 const Input = () => {
   return (
     <div>Input</div>

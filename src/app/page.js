@@ -23,14 +23,14 @@ export default function HomePage() {
           about whether these premium features would be useful to you.
         </p>
 
-        <a
+        <Link
           href="/premium-poll"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
         >
           Take the Poll
-        </a>
+        </Link>
       </div>
 
       <h1 className="text-4xl font-bold">Welcome to MadLibs!</h1>

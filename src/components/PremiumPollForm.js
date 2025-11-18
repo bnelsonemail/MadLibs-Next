@@ -60,7 +60,7 @@ export default function PremiumPollForm() {
       } else {
         setError("Failed to submit poll. Please try again.");
       }
-    } catch (err) {
+    } catch {
       setError("An error occurred. Please try again.");
     } finally {
       setIsSubmitting(false);

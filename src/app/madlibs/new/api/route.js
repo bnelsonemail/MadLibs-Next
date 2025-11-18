@@ -12,7 +12,7 @@ export async function POST(req) {
     }
   }
 
-  saveStoryToSession(story);
+  await saveStoryToSession(story);
 
   return NextResponse.json({ success: true });
 }

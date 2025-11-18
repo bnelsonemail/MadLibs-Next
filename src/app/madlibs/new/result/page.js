@@ -1,7 +1,8 @@
 import { getStoryFromSession } from '@/lib/sessions/session';
+import Link from 'next/link';
 
-export default function MadLibStoryResult() {
-  const story = getStoryFromSession();
+export default async function MadLibStoryResult() {
+  const story = await getStoryFromSession();
 
   if (!story) {
     return (
@@ -10,7 +11,7 @@ export default function MadLibStoryResult() {
         <p className="text-gray-500 dark:text-gray-400 mt-2">
           Create a story first!
         </p>
-        <a
+        <Link
           href="/madlibs/new"
           className="inline-block mt-4 px-6 py-3 rounded-md font-semibold 
                      bg-green-600 hover:bg-green-700 text-white 
@@ -18,7 +19,7 @@ export default function MadLibStoryResult() {
                      transition"
         >
           Create a MadLib
-        </a>
+        </Link>
       </div>
     );
   }
@@ -31,7 +32,7 @@ export default function MadLibStoryResult() {
       <p className="whitespace-pre-wrap text-lg text-gray-700 dark:text-gray-300">{story}</p>
       
       <div className="flex justify-center mt-8">
-        <a
+        <Link
           href="/madlibs/new"
           className="px-6 py-3 rounded-md font-semibold 
                      bg-green-600 hover:bg-green-700 text-white 
@@ -39,7 +40,7 @@ export default function MadLibStoryResult() {
                      transition"
         >
           Create Another MadLib
-        </a>
+        </Link>
       </div>
     </div>
   );
