@@ -1,6 +1,7 @@
 # MadLibs App
 
-![MadLibs App](https://via.placeholder.com/800x400?text=MadLibs+App+Preview)  
+![MadLibs App Screenshot](./public/madlibsbanner.png)
+[MadLibs App](https://madlibsmagic.com/)  
 *A fun, interactive app where users can create and play MadLibs stories!*
 
 ---
