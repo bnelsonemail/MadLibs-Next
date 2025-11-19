@@ -9,10 +9,10 @@
 ## 🔖 Badges
 
 <p align="left">
-  <img src="https://img.shields.io/badge/version-1.1.0-blue.svg" alt="version badge" />
+  <img src="https://img.shields.io/badge/version-1.2.0-blue.svg" alt="version badge" />
   <img src="https://img.shields.io/badge/deployed%20on-Vercel-black?logo=vercel" alt="deployed badge" />
-  <img src="https://img.shields.io/github/license/bnelsonemail/madlibs-app" alt="license badge" />
-  <img src="https://img.shields.io/badge/Next.js-15-black?logo=next.js" alt="nextjs badge"/>
+  <img src="https://img.shields.io/badge/license-MIT-green" alt="license badge" />
+  <img src="https://img.shields.io/badge/Next.js-16-black?logo=next.js" alt="nextjs badge"/>
   <img src="https://img.shields.io/badge/TailwindCSS-3.x-38B2AC?logo=tailwindcss&logoColor=white" alt="tailwind badge" />
 </p>
 
@@ -117,7 +117,7 @@ This project is open-source under the **MIT License**.
 |--------|------|-------------|
 | **1.0.0** | Feb 2025 | Initial release. Full MadLib creator + player, category system, responsive design. |
 | **1.1.0** | Aug 2025 | Added full **dark/light mode** toggle with persisted theme + added **contact footer** to all pages. |
-| **1.2.0** | _Planned_ | Local storage persistence for user-created MadLibs. |
+| **1.2.0** | Nov 2025 | Local storage persistence for user-created MadLibs. |
 | **2.0.0** | _Planned_ | Backend integration (database + user authentication + saved library). |
 | **2.1.0** | _Planned_ | Public story sharing + “featured stories” section. |
 | **3.0.0** | _Planned_ | Full custom themes + multiple color palette options. |
