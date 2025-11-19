@@ -1,14 +1,57 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+// eslint.config.mjs
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import js from "@eslint/js";
+import nextPlugin from "@next/eslint-plugin-next";
+import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
 
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+export default [
+  {
+    ignores: ["**/.next/**", "**/node_modules/**"],
+  },
+  js.configs.recommended,
+  {
+    plugins: {
+      "@next/next": nextPlugin,
+      "react": react,
+      "react-hooks": reactHooks,
+    },
+    rules: {
+      // Allow JSX usage inside Next.js layouts without false unused import errors
+      "no-unused-vars": ["error", { varsIgnorePattern: "^_" }],
+      
+      // React rules
+      "react/jsx-uses-react": "error",
+      "react/jsx-uses-vars": "error",
 
-const eslintConfig = [...compat.extends("next/core-web-vitals")];
+      // Allow <Link> warnings to be properly enforced
+      "@next/next/no-html-link-for-pages": "error",
+    },
+    languageOptions: {
+      ecmaVersion: "latest",
+      sourceType: "module",
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        // Node Globals
+        process: "readonly",
+        console: "readonly",
 
-export default eslintConfig;
+        // Web API Globals
+        Response: "readonly",
+        Request: "readonly",
+        FormData: "readonly",
+        URLSearchParams: "readonly",
+        localStorage: "readonly",
+        document: "readonly",
+        window: "readonly",
+        fetch: "readonly",
+        crypto: "readonly",
+        TextEncoder: "readonly",
+      },
+    },
+  },
+];

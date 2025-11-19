@@ -9,6 +9,30 @@ export default function HomePage() {
 
   return (
     <main className="text-center p-8 transition-colors duration-300">
+      <div className="my-8 p-6 bg-blue-100 dark:bg-blue-900 rounded-lg shadow-md">
+        <h2 className="text-2xl font-bold mb-2">Help Improve MadLibs!</h2>
+
+        <p className="mb-3">
+          We're exploring optional premium features for users who want to create and
+          save unlimited advanced MadLibs — while keeping the entire free site exactly
+          the same.
+        </p>
+
+        <p className="mb-4">
+          Nothing is changing right now. We would simply love your quick feedback
+          about whether these premium features would be useful to you.
+        </p>
+
+        <Link
+          href="/premium-poll"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+        >
+          Take the Poll
+        </Link>
+      </div>
+
       <h1 className="text-4xl font-bold">Welcome to MadLibs!</h1>
       <p className="mt-4 text-lg">Create and play hilarious stories with custom words.</p>
 

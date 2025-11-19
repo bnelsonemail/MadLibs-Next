@@ -22,6 +22,9 @@ export default function Navbar() {
         <Link href="/madlibs/new" className="hover:text-blue-500">
           Create MadLib
         </Link>
+        <Link href="/premium" className="hover:text-blue-500">
+          Premium
+        </Link>
 
         {/* Dark Mode Toggle */}
         <button
