@@ -1,6 +1,9 @@
 import { turso } from "@/lib/turso";
 import { hashIP } from "@/lib/hash-ip";
 
+// Mark this route as dynamic to prevent static generation
+export const dynamic = 'force-dynamic';
+
 // Sanitization helper
 function sanitizeText(text) {
   if (!text) return null;
@@ -17,6 +20,14 @@ function sanitizeText(text) {
 
 export async function POST(req) {
   try {
+    // Check if turso client is initialized
+    if (!turso) {
+      return Response.json(
+        { success: false, error: "Database not configured" },
+        { status: 500 }
+      );
+    }
+
     const { wantsPremium, pricePoint, comment, suggestions } = await req.json();
 
     const userAgent = req.headers.get("user-agent") || "unknown";
