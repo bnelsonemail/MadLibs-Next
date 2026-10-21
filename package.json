@@ -21,6 +21,7 @@
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@next/eslint-plugin-next": "^16.0.3",
+    "baseline-browser-mapping": "^2.11.30",
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.0.3",
     "eslint-plugin-import": "^2.32.0",
